@@ -21,5 +21,3 @@ docs/_build/
 *.\#*
 *~
 documentation/_build
-anybox.recipe.openerp/
-fetch_partner_mail/
