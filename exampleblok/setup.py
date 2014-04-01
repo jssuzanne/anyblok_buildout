@@ -6,6 +6,13 @@ requires = [
     'anyblok',
 ]
 
+WorkBlok = [
+    'desk=exampleblok.desk_blok:DeskBlok',
+    'worker=exampleblok.worker_blok:WorkerBlok',
+    'position=exampleblok.position_blok:PositionBlok',
+    'worker-position=exampleblok.worker_position_blok:WorkerPositionBlok',
+],
+
 setup(
     name="ExampleBlok",
     version=version,
@@ -26,9 +33,7 @@ setup(
         'console_scripts': [
             'exampleblok=exampleblok.scripts:exampleblok',
         ],
-        'ExampleBlok': [
-            'exampleblok=exampleblok.bloks.example_blok:ExampleBlok',
-        ],
+        'WorkBlok': WorkBlok,
     },
     extras_require={},
 )
