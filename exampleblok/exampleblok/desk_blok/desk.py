@@ -20,7 +20,7 @@ class Room:
 
     id = Integer(label="Identifying", primary_key=True)
     number = Integer(label="Number of the room", nullable=False)
-    address = Many2One(label="Address", model=Model.Address,
+    address = Many2One(label="Address", model=Model.Address, nullable=False,
                        remote_column="id", one2many="rooms")
 
     def __str__(self):
