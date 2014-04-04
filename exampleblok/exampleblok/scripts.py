@@ -9,5 +9,7 @@ def exampleblok():
         'Example Blok', '1.0',
         argsparse_groups=['config', 'database'],
         parts_to_load=['AnyBlok', 'WorkBlok'])
-    for worker in registry.Worker.query().all():
-        logger.info(worker)
+    for address in registry.Address.query().all():
+        for room in address.rooms:
+            for worker in room.workers:
+                logger.info(worker)

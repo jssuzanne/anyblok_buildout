@@ -1,5 +1,5 @@
 from AnyBlok import target_registry, Model
-from AnyBlok.Column import String, Integer
+from AnyBlok.Column import String
 from AnyBlok.RelationShip import Many2One
 
 
@@ -7,10 +7,8 @@ from AnyBlok.RelationShip import Many2One
 class Worker:
 
     name = String(label="Number of the room", primary_key=True)
-    room_id = Integer(label="Desk", nullable=False,
-                      foreign_key=(Model.Room, 'id'))
-    room = Many2One(label="Desk", model=Model.Room,
-                    foreign_keys="room_id")
+    room = Many2One(label="Desk", model=Model.Room, remote_column="id",
+                    one2many="workers")
 
     def __str__(self):
         return "%s in %s" % (self.name, self.room)
