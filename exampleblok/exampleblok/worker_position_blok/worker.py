@@ -5,8 +5,7 @@ from AnyBlok.RelationShip import Many2One
 @target_registry(Model)
 class Worker:
 
-    position = Many2One(label="Position", model=Model.Position,
-                        remote_column="name")
+    position = Many2One(label="Position", model=Model.Position)
 
     def __str__(self):
         res = super(Worker, self).__str__()

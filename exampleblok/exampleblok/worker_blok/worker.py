@@ -7,8 +7,7 @@ from AnyBlok.RelationShip import Many2One
 class Worker:
 
     name = String(label="Number of the room", primary_key=True)
-    room = Many2One(label="Desk", model=Model.Room, remote_column="id",
-                    one2many="workers")
+    room = Many2One(label="Desk", model=Model.Room, one2many="workers")
 
     def __str__(self):
         return "%s in %s" % (self.name, self.room)
