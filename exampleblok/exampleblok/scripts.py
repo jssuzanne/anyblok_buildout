@@ -1,4 +1,5 @@
 import anyblok
+import code
 from logging import getLogger
 from anyblok._argsparse import ArgsParseManager
 
@@ -31,3 +32,16 @@ def exampleblok():
 
     if message_after:
         logger.info(message_after)
+
+
+def interpreter():
+    registry = anyblok.start(
+        'Interpreter', '1.0',
+        argsparse_groups=['config', 'database', 'interpreter'],
+        parts_to_load=['AnyBlok', 'WorkBlok'])
+    python_script = ArgsParseManager.get('python_script')
+    if python_script:
+        with open(python_script, "r") as fh:
+            exec(fh.read(), None, locals())
+    else:
+        code.interact(local=locals())

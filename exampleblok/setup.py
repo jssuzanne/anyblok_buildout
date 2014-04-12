@@ -32,6 +32,7 @@ setup(
     entry_points={
         'console_scripts': [
             'exampleblok=exampleblok.scripts:exampleblok',
+            'exampleblok_interpretor=exampleblok.scripts:interpreter',
         ],
         'WorkBlok': WorkBlok,
     },
