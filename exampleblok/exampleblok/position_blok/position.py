@@ -1,5 +1,7 @@
-from AnyBlok import target_registry, Model
-from AnyBlok.Column import String
+from anyblok import Declarations
+target_registry = Declarations.target_registry
+Model = Declarations.Model
+String = Declarations.Column.String
 
 
 @target_registry(Model)

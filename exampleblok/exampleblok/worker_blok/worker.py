@@ -1,6 +1,8 @@
-from AnyBlok import target_registry, Model
-from AnyBlok.Column import String
-from AnyBlok.RelationShip import Many2One
+from anyblok import Declarations
+target_registry = Declarations.target_registry
+Model = Declarations.Model
+String = Declarations.Column.String
+Many2One = Declarations.RelationShip.Many2One
 
 
 @target_registry(Model)

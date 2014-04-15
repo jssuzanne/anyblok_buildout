@@ -4,6 +4,8 @@ from anyblok.blok import Blok
 class PositionBlok(Blok):
 
     def install(self):
-        for position in ('DG', 'Comercial', 'Secrétaire', 'Chef de projet',
-                         'Developper'):
-            self.registry.Position.insert(name=position)
+        self.registry.Position.multi_insert({'name': 'DG'},
+                                            {'name': 'Comercial'},
+                                            {'name': 'Secrétaire'},
+                                            {'name': 'Chef de projet'},
+                                            {'name': 'Developper'})
