@@ -33,6 +33,8 @@ setup(
         'console_scripts': [
             'exampleblok=exampleblok.scripts:exampleblok',
             'exampleblok_interpretor=exampleblok.scripts:interpreter',
+            'exampleblok_sqlschema=exampleblok.scripts:sqlschema',
+            'exampleblok_modelschema=exampleblok.scripts:modelschema',
         ],
         'WorkBlok': WorkBlok,
     },

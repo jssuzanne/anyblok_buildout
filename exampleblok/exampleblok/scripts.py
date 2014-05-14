@@ -2,6 +2,8 @@ import anyblok
 from logging import getLogger
 from anyblok._argsparse import ArgsParseManager
 from anyblok.scripts import interpreter as anyblok_interpreter
+from anyblok.scripts import sqlschema as anyblok_sqlschema
+from anyblok.scripts import modelschema as anyblok_modelschema
 
 logger = getLogger(__name__)
 
@@ -38,4 +40,18 @@ def interpreter():
     anyblok_interpreter(
         'Interpreter', '1.0',
         argsparse_groups=['config', 'database', 'interpreter'],
+        parts_to_load=['AnyBlok', 'WorkBlok'])
+
+
+def sqlschema():
+    anyblok_sqlschema(
+        'SQL Schema', '1.0',
+        argsparse_groups=['config', 'database', 'schema'],
+        parts_to_load=['AnyBlok', 'WorkBlok'])
+
+
+def modelschema():
+    anyblok_modelschema(
+        'UML Schema', '1.0',
+        argsparse_groups=['config', 'database', 'schema'],
         parts_to_load=['AnyBlok', 'WorkBlok'])
