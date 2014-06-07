@@ -74,7 +74,7 @@ By the way if you want to try the demo, here are the steps to follow.
 
     createdb demo
 
-* Edit the anyblok.cfg file accroding to your database settings
+* Edit the anyblok.cfg file according to your database settings
 * Run the server
 
     ./bin/anyblok_wsgi -c anyblok.cfg
@@ -82,6 +82,13 @@ By the way if you want to try the demo, here are the steps to follow.
 * Depending on how you edit the anyblok.cfg, launch a browser and go to the right url and port. Default is :
     
     http://localhost:8080
+
+You'll see a POC page with some polymer web components.
+
+To go further with the example, you can install the `exampleblok` and will automatically create you database tables and populate some fixtures.
+Look at the `doc` directory of the main Anyblok respository for more details.
+
+https://bitbucket.org/jssuzanne/anyblok/
 
 Contributing (hackers needed!)
 ==============================
@@ -96,5 +103,3 @@ Jean-Sébastien Suzanne
 License
 =======
 This is free software. License details comin soon.
-
-
