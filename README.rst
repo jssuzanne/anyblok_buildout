@@ -7,7 +7,8 @@ This is a buildout recipe for `Anyblok`_
 The main goal of this recipe is to help you in : 
 
 * Bootstrapping a new `Anyblok`_ directories layout to start a new project
-* Install all required dependencies in an isolated environment that does not mess up your main python path
+* Install all required dependencies in an isolated environment that does not mess up your main
+  python path
 
 .. _anyblok: https://bitbucket.org/jssuzanne/anyblok
 
@@ -53,15 +54,21 @@ Change to the project directory, bootstrap and build it
     cd demo
     ../bin/python3.3 bootstrap.py
 
-Launch the buildout. Beware of launching it from the new bin directory created by the previous command
+Launch the buildout. Beware of launching it from the new bin directory created by the previous
+command
 
     ./bin/buildout
+
+if you need the web server dependencies use `anyblok_web_server.cfg` config file
+
+    ./bin/buildout -c anyblok_web_server.cfg
 
 Your environment is ready, You're done!
 
 What has happened here ?
 ========================
-The ./bin/buildout command as automatically get and install all the required dependencies using the buildout.cfg file.
+The ./bin/buildout command as automatically get and install all the required dependencies using
+the buildout.cfg file.
 Look at buildout.cfg file to understand deeply the Anyblok ecosystem.
 
 How to run the whole stuff ?
@@ -79,13 +86,15 @@ By the way if you want to try the demo, here are the steps to follow.
 
     ./bin/anyblok_wsgi -c anyblok.cfg
 
-* Depending on how you edit the anyblok.cfg, launch a browser and go to the right url and port. Default is :
+* Depending on how you edit the anyblok.cfg, launch a browser and go to the right url and port.
+  Default is :
     
     http://localhost:8080
 
 You'll see a POC page with some polymer web components.
 
-To go further with the example, you can install the `exampleblok` and will automatically create you database tables and populate some fixtures.
+To go further with the example, you can install the `exampleblok` and will automatically create you
+database tables and populate some fixtures.
 Look at the `doc` directory of the main Anyblok respository for more details.
 
 https://bitbucket.org/jssuzanne/anyblok/
