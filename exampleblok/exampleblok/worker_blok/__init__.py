@@ -3,6 +3,8 @@ from anyblok.blok import Blok
 
 class WorkerBlok(Blok):
 
+    version = '1.0.0'
+
     autoinstall = True
 
     required = [

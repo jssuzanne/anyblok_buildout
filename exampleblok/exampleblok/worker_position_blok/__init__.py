@@ -4,6 +4,8 @@ from anyblok.blok import Blok
 
 class WorkerPositionBlok(Blok):
 
+    version = '1.0.0'
+
     priority = 200
 
     conditional = [
