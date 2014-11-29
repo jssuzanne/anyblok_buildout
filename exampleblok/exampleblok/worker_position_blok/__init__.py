@@ -21,6 +21,7 @@ class WorkerPositionBlok(Blok):
             'Christophe Combelles': 'Comercial',
             'Sandrine Chaufournais': u"Secrétaire",
             'Pierre Verkest': 'Chef de projet',
+            'Franck Bret': 'Chef de projet',
             u"Simon André": 'Developper',
             'Florent Jouatte': 'Developper',
             'Clovis Nzouendjou': 'Developper',
@@ -30,3 +31,7 @@ class WorkerPositionBlok(Blok):
         for worker, position in position_by_worker.items():
             Worker.query().filter(Worker.name == worker).update({
                 'position_name': position})
+
+    def update(self, latest_version):
+        if latest_version is None:
+            self.install()

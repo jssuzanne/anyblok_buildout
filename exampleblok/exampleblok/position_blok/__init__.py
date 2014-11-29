@@ -11,3 +11,7 @@ class PositionBlok(Blok):
                                             {'name': 'Secrétaire'},
                                             {'name': 'Chef de projet'},
                                             {'name': 'Developper'})
+
+    def update(self, latest_version):
+        if latest_version is None:
+            self.install()

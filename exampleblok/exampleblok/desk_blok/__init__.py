@@ -10,3 +10,7 @@ class DeskBlok(Blok):
         address = self.registry.Address.insert(street='14-16 rue Soleillet',
                                                zip='75020', city='Paris')
         self.registry.Room.insert(number=308, address=address)
+
+    def update(self, latest_version):
+        if latest_version is None:
+            self.install()

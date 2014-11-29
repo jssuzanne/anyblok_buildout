@@ -21,7 +21,11 @@ class WorkerBlok(Blok):
         workers = [dict(name=worker, room=room)
                    for worker in ('Georges Racinet', 'Christophe Combelles',
                                   'Sandrine Chaufournais', 'Pierre Verkest',
-                                  u"Simon André", 'Florent Jouatte',
-                                  'Clovis Nzouendjou',
+                                  'Franck Bret', u"Simon André",
+                                  'Florent Jouatte', 'Clovis Nzouendjou',
                                   u"Jean-Sébastien Suzanne")]
         self.registry.Worker.multi_insert(*workers)
+
+    def update(self, latest_version):
+        if latest_version is None:
+            self.install()
