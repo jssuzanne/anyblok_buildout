@@ -1,12 +1,12 @@
 from anyblok import Declarations
-target_registry = Declarations.target_registry
+register = Declarations.register
 Model = Declarations.Model
 Integer = Declarations.Column.Integer
 String = Declarations.Column.String
 Many2One = Declarations.RelationShip.Many2One
 
 
-@target_registry(Model)
+@register(Model)
 class Address:
 
     id = Integer(label="Identifying", primary_key=True)
@@ -18,7 +18,7 @@ class Address:
         return "%s %s %s" % (self.street, self.zip, self.city)
 
 
-@target_registry(Model)
+@register(Model)
 class Room:
 
     id = Integer(label="Identifying", primary_key=True)

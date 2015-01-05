@@ -1,10 +1,10 @@
 from anyblok import Declarations
-target_registry = Declarations.target_registry
+register = Declarations.register
 Model = Declarations.Model
 Many2One = Declarations.RelationShip.Many2One
 
 
-@target_registry(Model)
+@register(Model)
 class Worker:
 
     position = Many2One(label="Position", model=Model.Position, nullable=False)
