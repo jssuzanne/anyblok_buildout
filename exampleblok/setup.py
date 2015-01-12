@@ -8,9 +8,9 @@ requires = [
 
 WorkBlok = [
     'desk=exampleblok.desk_blok:DeskBlok',
-    'worker=exampleblok.worker_blok:WorkerBlok',
+    'employee=exampleblok.employee_blok:EmployeeBlok',
     'position=exampleblok.position_blok:PositionBlok',
-    'worker-position=exampleblok.worker_position_blok:WorkerPositionBlok',
+    'employee-position=exampleblok.employee_position_blok:EmployeePositionBlok',
 ],
 
 setup(

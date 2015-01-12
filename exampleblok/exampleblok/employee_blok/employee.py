@@ -6,7 +6,7 @@ Many2One = Declarations.RelationShip.Many2One
 
 
 @register(Model)
-class Worker:
+class Employee:
 
     name = String(label="Number of the room", primary_key=True)
     room = Many2One(label="Desk", model=Model.Room, one2many="workers")

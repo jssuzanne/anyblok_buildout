@@ -2,21 +2,21 @@
 from anyblok.blok import Blok
 
 
-class WorkerPositionBlok(Blok):
+class EmployeePositionBlok(Blok):
 
     version = '1.0.0'
 
     priority = 200
 
     conditional = [
-        'worker',
+        'employee',
         'position',
     ]
 
     def install(self):
-        Worker = self.registry.Worker
+        Employee = self.registry.Employee
 
-        position_by_worker = {
+        position_by_employee = {
             'Georges Racinet': 'DG',
             'Christophe Combelles': 'Comercial',
             'Sandrine Chaufournais': u"Secrétaire",
@@ -28,8 +28,8 @@ class WorkerPositionBlok(Blok):
             u"Jean-Sébastien Suzanne": 'Developper',
         }
 
-        for worker, position in position_by_worker.items():
-            Worker.query().filter(Worker.name == worker).update({
+        for employee, position in position_by_employee.items():
+            Employee.query().filter(Employee.name == employee).update({
                 'position_name': position})
 
     def update(self, latest_version):
