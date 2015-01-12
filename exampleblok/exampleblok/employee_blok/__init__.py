@@ -8,7 +8,7 @@ class EmployeeBlok(Blok):
     autoinstall = True
 
     required = [
-        'desk',
+        'office',
     ]
 
     optional = [
@@ -18,13 +18,17 @@ class EmployeeBlok(Blok):
     def install(self):
         room = self.registry.Room.query().filter(
             self.registry.Room.number == 308).first()
-        employee = [dict(name=employee, room=room)
-                    for employee in ('Georges Racinet', 'Christophe Combelles',
-                                     'Sandrine Chaufournais', 'Pierre Verkest',
-                                     'Franck Bret', "Simon André",
-                                     'Florent Jouatte', 'Clovis Nzouendjou',
-                                     "Jean-Sébastien Suzanne")]
-        self.registry.Employee.multi_insert(*employee)
+        employees = [dict(name=employee, room=room)
+                     for employee in ('Georges Racinet',
+                                      'Christophe Combelles',
+                                      'Sandrine Chaufournais',
+                                      'Pierre Verkest',
+                                      'Franck Bret',
+                                      "Simon André",
+                                      'Florent Jouatte',
+                                      'Clovis Nzouendjou',
+                                      "Jean-Sébastien Suzanne")]
+        self.registry.Employee.multi_insert(*employees)
 
     def update(self, latest_version):
         if latest_version is None:

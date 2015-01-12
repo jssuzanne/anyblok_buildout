@@ -7,7 +7,7 @@ requires = [
 ]
 
 WorkBlok = [
-    'desk=exampleblok.desk_blok:DeskBlok',
+    'office=exampleblok.office_blok:OfficeBlok',
     'employee=exampleblok.employee_blok:EmployeeBlok',
     'position=exampleblok.position_blok:PositionBlok',
     'employee-position=exampleblok.employee_position_blok:EmployeePositionBlok',

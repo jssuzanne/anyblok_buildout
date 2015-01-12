@@ -1,7 +1,7 @@
 from anyblok.blok import Blok
 
 
-class DeskBlok(Blok):
+class OfficeBlok(Blok):
 
     version = '1.0.0'
 
