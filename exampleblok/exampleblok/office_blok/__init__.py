@@ -14,3 +14,7 @@ class OfficeBlok(Blok):
     def update(self, latest_version):
         if latest_version is None:
             self.install()
+
+    @classmethod
+    def import_declaration_module(cls):
+        from . import office  # noqa

@@ -11,3 +11,7 @@ class Position:
 
     def __str__(self):
         return self.name
+
+    @classmethod
+    def import_declaration_module(cls):
+        from . import position  # noqa
