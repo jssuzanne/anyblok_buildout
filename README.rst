@@ -59,10 +59,6 @@ command
 
     ./bin/buildout
 
-if you need the web server dependencies use `anyblok_web_server.cfg` config file
-
-    ./bin/buildout -c anyblok_web_server.cfg
-
 Your environment is ready, You're done!
 
 What has happened here ?
@@ -77,21 +73,10 @@ How to run the whole stuff ?
 The buildout comes with a small Anyblok example. You can delete it to create your own.
 By the way if you want to try the demo, here are the steps to follow.
 
+* Edit the anyblok.cfg file according to your database settings
 * Create a new database
 
-    createdb demo
-
-* Edit the anyblok.cfg file according to your database settings
-* Run the server
-
-    ./bin/anyblok_wsgi -c anyblok.cfg
-
-* Depending on how you edit the anyblok.cfg, launch a browser and go to the right url and port.
-  Default is :
-    
-    http://localhost:8080
-
-You'll see a POC page with some polymer web components.
+    ./bin/anyblok_createdb -c anyblok.cfg
 
 To go further with the example, you can install the `exampleblok` and will automatically create you
 database tables and populate some fixtures.
@@ -111,4 +96,4 @@ Jean-Sébastien Suzanne
 
 License
 =======
-This is free software. License details comin soon.
+This is free software (MPL2).
