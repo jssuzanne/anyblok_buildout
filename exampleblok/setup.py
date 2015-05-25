@@ -6,7 +6,7 @@ requires = [
     'anyblok',
 ]
 
-WorkBlok = [
+bloks = [
     'office=exampleblok.office_blok:OfficeBlok',
     'employee=exampleblok.employee_blok:EmployeeBlok',
     'position=exampleblok.position_blok:PositionBlok',
@@ -32,11 +32,8 @@ setup(
     entry_points={
         'console_scripts': [
             'exampleblok=exampleblok.scripts:exampleblok',
-            'exampleblok_interpretor=exampleblok.scripts:interpreter',
-            'exampleblok_sqlschema=exampleblok.scripts:sqlschema',
-            'exampleblok_modelschema=exampleblok.scripts:modelschema',
         ],
-        'WorkBlok': WorkBlok,
+        'bloks': bloks,
     },
     extras_require={},
 )
