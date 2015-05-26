@@ -1,8 +1,9 @@
 from anyblok import Declarations
+from anyblok.column import String
+from anyblok.relationship import Many2One
+
 register = Declarations.register
 Model = Declarations.Model
-String = Declarations.Column.String
-Many2One = Declarations.RelationShip.Many2One
 
 
 @register(Model)

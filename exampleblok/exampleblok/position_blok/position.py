@@ -1,7 +1,8 @@
 from anyblok import Declarations
+from anyblok.column import String
+
 register = Declarations.register
 Model = Declarations.Model
-String = Declarations.Column.String
 
 
 @register(Model)

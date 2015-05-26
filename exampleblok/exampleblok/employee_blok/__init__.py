@@ -1,4 +1,5 @@
 from anyblok.blok import Blok
+from . import config  # noqa
 
 
 class EmployeeBlok(Blok):
@@ -37,4 +38,3 @@ class EmployeeBlok(Blok):
     @classmethod
     def import_declaration_module(cls):
         from . import employee  # noqa
-        from . import argsparse  # noqa

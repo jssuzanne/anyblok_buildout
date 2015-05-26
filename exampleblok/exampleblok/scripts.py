@@ -1,6 +1,6 @@
 import anyblok
 from logging import getLogger
-from anyblok._argsparse import ArgsParseManager
+from anyblok.config import Configuration
 
 logger = getLogger()
 
@@ -11,9 +11,9 @@ def exampleblok():
     # return a registry if the database are selected
     registry = anyblok.start(
         'Example Blok', '1.0',
-        argsparse_groups=['config', 'database', 'message'])
-    message_before = ArgsParseManager.get('message_before')
-    message_after = ArgsParseManager.get('message_after')
+        configuration_groups=['config', 'database', 'message'])
+    message_before = Configuration.get('message_before')
+    message_after = Configuration.get('message_after')
 
     if not registry:
         logger.warning("No database database selected")
