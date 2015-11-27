@@ -10,8 +10,7 @@ def exampleblok():
     # select the groupe of options to display
     # return a registry if the database are selected
     registry = anyblok.start(
-        'Example Blok', '1.0',
-        configuration_groups=['config', 'database', 'message'])
+        'Example Blok', configuration_groups=['message', 'logging'])
     message_before = Configuration.get('message_before')
     message_after = Configuration.get('message_after')
 
