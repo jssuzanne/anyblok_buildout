@@ -46,11 +46,11 @@ Create a directory to store your project and change into it::
 
 Clone the current repository and give it your project name
 
-    hg clone ssh://hg@bitbucket.org/jssuzanne/anyblok_buildout demo
+    git clone https://github.com/jssuzanne/anyblok_buildout.git
 
 Change to the project directory, bootstrap and build it::
 
-    cd demo
+    cd anyblok_buildout
     ../bin/python3.3 bootstrap.py
 
 Launch the buildout. Beware of launching it from the new bin directory created by the previous
@@ -81,7 +81,7 @@ To go further with the example, you can install the ``exampleblok``;
 it will automatically create database tables and populate some fixtures.
 Look at the ``doc`` directory of the main Anyblok respository for more details.
 
-https://bitbucket.org/jssuzanne/anyblok/
+https://github.com/AnyBlok/AnyBlok.git
 
 Contributing (hackers needed!)
 ==============================
