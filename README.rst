@@ -10,7 +10,7 @@ The main goal of this recipe is to help you in :
 * Install all required dependencies in an isolated environment that does not mess up your main
   python path
 
-.. _anyblok: https://bitbucket.org/jssuzanne/anyblok
+.. _anyblok: https://github.com/AnyBlok/AnyBlok.git 
 
 System dependencies
 -------------------
